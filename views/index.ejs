@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trendy Threads</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+header {
+    background-color: white;
+    padding:3px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+/*****************************************************************************************************/
+
+
+#product-detail {
+    margin-top: 40px;
+}
+
+.product-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.product-info img {
+    width: auto;
+    height: 500px;
+}
+
+.product-details {
+    text-align: left;
+}
+
+/*******************************************************************************************************/
+
+#name{ 
+        font-family: 'Arial', sans-serif; 
+        /* font-size: 48px;  */
+        font-weight: bold; 
+        color: #2E3A59; /*dark blue color similar to AJIO */
+        letter-spacing: 5px;
+        text-align: center; 
+        
+    
+}
+
+main {
+    padding: 5px;
+}
+
+#hero {
+    background-image: url('image/hero11.jpg');
+    background-size: cover; 
+    background-position: center; /* Centers the image */
+    height: 80vh; /* Adjust height as per your requirement */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+.heading {
+    font-size: 48px;
+    color: #d4af37; /* Gold color */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 3px solid #d4af37;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+
+.category {
+    margin-top: 40px;
+}
+
+.dress-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.dress {
+    width: 22%;
+    border: 1px solid #ddd;
+    padding: 10px;
+    box-shadow: 2px 2px 8px #aaa;
+}
+
+.dress img {
+    width: 100%;
+    height: auto;
+}
+
+.dress h3, .dress p {
+    margin: 10px 0;
+}
+
+.img-w {
+    
+    overflow: hidden; /* Hide overflow when image scales */
+}
+
+.img-w img {
+    transition: transform 0.5s ease; /* Smooth scaling transition */
+}
+
+.img-w:hover img {
+    transform: scale(1.1); /* Scale image on hover */
+
+    
+}
+
+    #rent-now{
+        font-size: 18px;
+        font-weight: 700;
+        border-radius: 3px;
+        padding: 12px 20px;
+        margin: 50px;
+        border: none;
+        color: #fff;
+        background-color: lightseagreen;
+        transition: all ease-in .3s;
+    }
+
+    #rent-now:hover{
+        box-shadow: 5px 5px 0px black;
+
+    }
+
+
+    /* #rent-form {
+        margin-top: 20px;
+        text-align: left;
+    }
+    
+    #rental-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    #rental-form label {
+        margin: 10px 0 5px;
+    }
+    
+    #rental-form input, #rental-form textarea {
+        width: 80%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+    }
+    
+    #rental-form button {
+        background-color: #ff6347;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        border-radius: 5px;
+    } */
+
+
+    #rent-form {
+        margin-top: 20px;
+        text-align: left;
+        max-width: 600px;
+        margin: 20px auto;
+        padding: 20px;
+        border: 2px solid #ddd;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        background-color: #f9f9f9;
+        transition: transform 0.3s ease-in-out;
+    }
+    
+    #rental-form {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    #rental-form label {
+        margin: 10px 0 5px;
+        font-weight: bold;
+        color: #333;
+    }
+    
+    #rental-form input, #rental-form textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+        transition: border-color 0.3s ease-in-out;
+    }
+    
+    #rental-form input:focus, #rental-form textarea:focus {
+        border-color: #ff6347;
+        outline: none;
+    }
+    
+    #rental-form button {
+        background-color: #ff6347;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: background-color 0.3s ease-in-out;
+    }
+    
+    #rental-form button:hover {
+        background-color: #e55340;
+    }
+    
+    #rent-form.show {
+        transform: scale(1.05);
+    }
+
+    .thank-you-message {
+        margin-top: 20px;
+        font-size: 1.5em;
+        color: #2E3A59; /* Dark blue color */
+        font-weight: bold;
+        text-align: center;
+        animation: fadeIn 0.5s ease-in-out;
+    }
+    
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+    
+    .continue-shopping-button {
+        background-color: #ff6347;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        border-radius: 5px;
+        margin-top: 20px;
+        font-size: 1em;
+        transition: background-color 0.3s ease-in-out;
+    }
+    
+    .continue-shopping-button:hover {
+        background-color: #e55340;
+    }
+    
+    
+    
+
+#reviews {
+    margin-top: 40px;
+}
+
+.review {
+    margin: 20px 0;
+}
+
+footer {
+    background-color: #f8f8f8;
+    padding: 20px;
+}
+
+footer form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+footer input {
+    padding: 10px;
+    font-size: 1em;
+}
+
+footer button {
+    padding: 10px;
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.footer-nav {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section a {
+    color: #ff6347;
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    text-decoration: underline;
+}
+.navbar {
+    background-color: #007bff;
+    padding: 10px 20px;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-logo {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbar-menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-menu li {
+    margin-left: 20px;
+}
+
+.navbar-menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.navbar-menu a:hover {
+    text-decoration: underline;
+}
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 id="name">TRENDY THREADS</h1>
+    </header>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="#" class="navbar-logo">Trendy Threads</a>
+            <ul class="navbar-menu">
+                <li><a href="/">Home </a></li>
+                <li><a href="about">About</a></li>
+                <li><a href="/login">Login</a></li>
+                <li><a href ="/register">Create Account</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Product Detail Section -->
+    <section id="product-detail" style="display: none;">
+        <h2>Product Details</h2>
+        <div class="product-info">
+            <img id="product-image" src="" alt="Product Image">
+            <div class="product-details">
+                <h3 id="product-name"></h3>
+                <p id="product-price"></p>
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <section id="hero">
+            <!-- Main banner content -->
+        </section>
+
+        <!-- New Arrival Category -->
+        <section id="popular" class="category">
+            <h2 class="heading">NEW ARRIVAL</h2>
+            <div class="dress-grid">
+                <div class="dress">
+                    <div class="img-w">
+                        <img src="/image/popular/popular1.jpg" alt="offshouldertop">
+                    </div>
+                    <h3>Offshoulder top</h3>
+                    <p>Price: ₹500</p>
+                </div>
+
+                <div class="dress">
+                    <div class="img-w">
+                        <img src="/image/popular/popular2.jpg" alt="Dress 2">
+                    </div>
+                    <h3>party top</h3>
+                    <p>Price: ₹1200</p>
+                </div>
+
+                <div class="dress">
+                    <div class="img-w">
+                        <img src="/image/popular/popular3.jpg" alt="Dress 2">
+                    </div>
+                    <h3>white top</h3>
+                    <p>Price: ₹1200</p>
+                </div>
+
+                <div class="dress">
+                    <div class="img-w">
+                        <img src="/image/popular/popular4.jpg" alt="Dress 2">
+                    </div>
+                    <h3> Dress 2</h3>
+                    <p>Price: ₹1200</p>
+                </div>
+
+                <div class="dress">
+                    <div class="img-w">
+                        <img src="/image/popular/popular5.jpg" alt="Dress 2">
+                    </div>
+                    <h3>Dress 2</h3>
+                    <p>Price: ₹1200</p>
+                </div>
+
+                <div class="dress">
+                    <div class="img-w">
+                        <img src="/image/popular/popular6.jpg" alt="Dress 2">
+                    </div>
+                    <h3></h3>
+                    <p>Price: ₹1100</p>
+                </div>
+
+                <div class="dress">
+                    <div class="img-w">
+                        <img src="/image/popular/popular7.jpg" alt="Dress 2">
+                    </div>
+                    <h3>offshoulder dress</h3>
+                    <p>Price: ₹1200</p>
+                </div>
+
+                <div class="dress">
+                    <div class="img-w">
+                        <img src="/image/popular/popular8.jpg" alt="Dress 2">
+                    </div>
+                    <h3>black top</h3>
+                    <p>Price: ₹1200</p>
+                </div>
+                <!-- Add more dresses as required -->
+            </div>
+        </section>
+
+        <!-- Traditional Category -->
+        <section id="traditional" class="category">
+            <h2 class="heading">Traditional</h2>
+            <div class="dress-grid">
+                <div class="dress">
+                    <div class="img-w">
+                        <img src="/image/traditional/traditional.jpg" alt="Dress 3">
+                    </div>
+                    <h3>lehenga</h3>
+                    <p>Price: ₹1100</p>
+                </div>
+
+
+                <div class="dress">
+                    <div class="img-w">
+                        <img src="/image/traditional/2 (1).jpg" alt="Dress 4">
+                    </div>
+                    <h3>wedding dress</h3>
+                    <p>Price: ₹1300</p>
+                </div>
+
+                <div class="dress">
+                    <div class="img-w">
+                        <img src="/image/traditional/2 (2).jpg" alt="Dress 4">
+                    </div>
+                    <h3>Saree</h3>
+                    <p>Price: ₹1300</p>
+                </div>
+
+                <div class="dress">
+                    <div class="img-w">
+                        <img src="/image/traditional/2 (3).jpg" alt="Dress 4">
+                    </div>
+                    <h3>Dress 4</h3>
+                    <p>Price: ₹1300</p>
+                </div>
+
+                <div class="dress">
+                    <div class="img-w">
+                        <img src="/image/traditional/2 (4).jpg" alt="Dress 4">
+                    </div>
+                    <h3>Dress 4</h3>
+                    <p>Price: ₹1300</p>
+                </div>
+
+                <div class="dress">
+                    <div class="img-w">
+                        <img src="/image/traditional/2 (5).jpg" alt="Dress 4">
+                    </div>
+                    <h3>Dress 4</h3>
+                    <p>Price: ₹1300</p>
+                </div>
+
+                <div class="dress">
+                    <div class="img-w">
+                        <img src="/image/traditional/2 (6).jpg" alt="Dress 4">
+                    </div>
+                    <h3>Dress 4</h3>
+                    <p>Price: ₹1300</p>
+                </div>
+
+                <div class="dress">
+                    <div class="img-w">
+                        <img src="/image/traditional/2(7).jpg" alt="Dress 4">
+                    </div>
+                    <h3>Dress 4</h3>
+                    <p>Price: ₹1300</p>
+                </div>
+                <!-- Add more dresses as required -->
+            </div>
+        </section>
+
+        <!-- Western Category -->
+        <section id="western" class="category">
+            <h2 class="heading">Western</h2>
+            <div class="dress-grid">
+                <div class="dress">
+                    <div class="img-w">
+                        <img src="/image/western/western1.jpg" alt="Dress 5">
+                    </div>
+                    <h3>Dress 5</h3>
+                    <p>Price: ₹1400</p>
+                </div>
+                <div class="dress">
+                    <div class="img-w">
+                        <img src="/image/western/western2.jpg" alt="Dress 6">
+                    </div>
+                    <h3>Dress 6</h3>
+                    <p>Price: ₹1500</p>
+                </div>
+
+                <div class="dress">
+                    <div class="img-w">
+                        <img src="/image/western/western3.jpg" alt="Dress 6">
+                    </div>
+                    <h3>Dress 6</h3>
+                    <p>Price: ₹1500</p>
+                </div>
+
+                <div class="dress">
+                    <div class="img-w">
+                        <img src="/image/western/western4.png" alt="Dress 6">
+                    </div>
+                    <h3>Dress 6</h3>
+                    <p>Price: ₹1500</p>
+                </div>
+
+                <div class="dress">
+                    <div class="img-w">
+                        <img src="/image/western/western5.jpg" alt="Dress 6">
+                    </div>
+                    <h3>Dress 6</h3>
+                    <p>Price: ₹1500</p>
+                </div>
+
+                <div class="dress">
+                    <div class="img-w">
+                        <img src="/image/western/7 (1).jpg" alt="Dress 6">
+                    </div>
+                    <h3>Dress 6</h3>
+                    <p>Price: ₹1500</p>
+                </div>
+
+                <div class="dress">
+                    <div class="img-w">
+                        <img src="/image/western/7 (1).png" alt="Dress 6">
+                    </div>
+                    <h3>Dress 6</h3>
+                    <p>Price: ₹1500</p>
+                </div>
+
+                <div class="dress">
+                    <div class="img-w">
+                        <img src="/image/western/7 (2).jpg" alt="Dress 6">
+                    </div>
+                    <h3>Dress 6</h3>
+                    <p>Price: ₹1500</p>
+                </div>
+
+                <!-- Add more dresses as required -->
+            </div>
+        </section>
+
+        <section id="partywear" class="category">
+            <h2 class="heading">Party Wear</h2>
+            <div class="dress-grid"></div>
+        </section>
+        <section id="casualwear" class="category">
+            <h2 class="heading">Casual Wear</h2>
+            <div class="dress-grid"></div>
+        </section>
+        <section id="officewear" class="category">
+            <h2 class="heading">Office Wear</h2>
+            <div class="dress-grid"></div>
+        </section>
+        <section id="ethnicwear" class="category">
+            <h2 class="heading">Ethnic Wear</h2>
+            <div class="dress-grid"></div>
+        </section>
+        <section id="sportswear" class="category">
+            <h2 class="heading">Sports Wear</h2>
+            <div class="dress-grid"></div>
+        </section>
+        
+
+        <!-- Reviews Section -->
+        <section id="reviews" class="category">
+            <h2>Customer Reviews</h2>
+            <div class="review">
+                <p>⭐⭐⭐⭐☆</p>
+                <p>Date: 2023-10-01</p>
+                <h3>Great Dress!</h3>
+                <p>Loved the fabric and fit.</p>
+            </div>
+            <!-- Add more reviews as required -->
+        </section>
+
+        <!-- Footer Section -->
+        <footer>
+            <h2>Trendy Threads Emails</h2>
+            <p>Making inboxes happy since 2019</p>
+            <form>
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit">Submit</button>
+            </form>
+            <p><a href="#">Privacy Policy</a></p>
+
+            <div class="footer-nav">
+                <div class="footer-section">
+                    <h3>Explore</h3>
+                    <ul>
+                        <li><a href="#">How It Works</a></li>
+                        <li><a href="#">Brands</a></li>
+                        <li><a href="#">Refer Friends</a></li>
+                        <li><a href="#">Gift Cards</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Help</h3>
+                    <ul>
+                        <li><a href="#">FAQs & Support</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Size Charts</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>About Us</h3>
+                    <ul>
+                        <li><a href="#">Our Story</a></li>
+                        <li><a href="#">Sustainability</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <p>© 2024 Trendy Threads. All rights reserved.</p>
+        </footer>
+    </main>
+    <script src="/javascript/data.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+    const dressGrids = document.querySelectorAll('.dress-grid');
+    dressGrids.forEach(grid => {
+        grid.innerHTML = ''; // Clear previous content
+    });
+
+    dresses.forEach(dress => {
+        const dressDiv = document.createElement('div');
+        dressDiv.classList.add('dress');
+        
+        dressDiv.innerHTML = `
+            <div class="img-w">
+                <img src="${dress.image}" alt="${dress.name}" data-id="${dress.id}">
+            </div>
+            <h3>${dress.name}</h3>
+            <p>Price: ${dress.price}</p>
+        `;
+
+        dressDiv.addEventListener('click', function() {
+            localStorage.setItem('selectedDressId', dress.id);
+            window.location.href = '/product';
+        });
+
+        // Append to relevant category
+        if (dress.image.includes('popular')) {
+            document.querySelector('#popular .dress-grid').appendChild(dressDiv);
+        } else if (dress.image.includes('traditional')) {
+            document.querySelector('#traditional .dress-grid').appendChild(dressDiv);
+        } else if (dress.image.includes('western')) {
+            document.querySelector('#western .dress-grid').appendChild(dressDiv);
+        } else if (dress.image.includes('partywear')) {
+            document.querySelector('#partywear .dress-grid').appendChild(dressDiv);
+        } else if (dress.image.includes('casualwear')) {
+            document.querySelector('#casualwear .dress-grid').appendChild(dressDiv);
+        } else if (dress.image.includes('officewear')) {
+            document.querySelector('#officewear .dress-grid').appendChild(dressDiv);
+        } else if (dress.image.includes('ethnicwear')) {
+            document.querySelector('#ethnicwear .dress-grid').appendChild(dressDiv);
+        } else if (dress.image.includes('sportswear')) {
+            document.querySelector('#sportswear .dress-grid').appendChild(dressDiv);
+        }
+    });
+
+    console.log('Dresses Rendered:', dressGrids);
+});
+
+
+    </script>
+</body>
+
+</html>

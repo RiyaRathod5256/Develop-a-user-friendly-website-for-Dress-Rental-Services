@@ -1,0 +1,351 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+header {
+    background-color: white;
+    padding:3px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+/*****************************************************************************************************/
+
+
+#product-detail {
+    margin-top: 40px;
+}
+
+.product-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.product-info img {
+    width: auto;
+    height: 500px;
+}
+
+.product-details {
+    text-align: left;
+}
+
+/*******************************************************************************************************/
+
+#name{ 
+        font-family: 'Arial', sans-serif; 
+        /* font-size: 48px;  */
+        font-weight: bold; 
+        color: #2E3A59; /*dark blue color similar to AJIO */
+        letter-spacing: 5px;
+        text-align: center; 
+        
+    
+}
+
+main {
+    padding: 5px;
+}
+
+#hero {
+    background-image: url('image/hero11.jpg');
+    background-size: cover; 
+    background-position: center; /* Centers the image */
+    height: 80vh; /* Adjust height as per your requirement */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+.heading {
+    font-size: 48px;
+    color: #d4af37; /* Gold color */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 3px solid #d4af37;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+
+.category {
+    margin-top: 40px;
+}
+
+.dress-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.dress {
+    width: 22%;
+    border: 1px solid #ddd;
+    padding: 10px;
+    box-shadow: 2px 2px 8px #aaa;
+}
+
+.dress img {
+    width: 100%;
+    height: auto;
+}
+
+.dress h3, .dress p {
+    margin: 10px 0;
+}
+
+.img-w {
+    
+    overflow: hidden; /* Hide overflow when image scales */
+}
+
+.img-w img {
+    transition: transform 0.5s ease; /* Smooth scaling transition */
+}
+
+.img-w:hover img {
+    transform: scale(1.1); /* Scale image on hover */
+
+    
+}
+
+    #rent-now{
+        font-size: 18px;
+        font-weight: 700;
+        border-radius: 3px;
+        padding: 12px 20px;
+        margin: 50px;
+        border: none;
+        color: #fff;
+        background-color: lightseagreen;
+        transition: all ease-in .3s;
+    }
+
+    #rent-now:hover{
+        box-shadow: 5px 5px 0px black;
+
+    }
+
+
+    /* #rent-form {
+        margin-top: 20px;
+        text-align: left;
+    }
+    
+    #rental-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    #rental-form label {
+        margin: 10px 0 5px;
+    }
+    
+    #rental-form input, #rental-form textarea {
+        width: 80%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+    }
+    
+    #rental-form button {
+        background-color: #ff6347;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        border-radius: 5px;
+    } */
+
+
+    #rent-form {
+        margin-top: 20px;
+        text-align: left;
+        max-width: 600px;
+        margin: 20px auto;
+        padding: 20px;
+        border: 2px solid #ddd;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        background-color: #f9f9f9;
+        transition: transform 0.3s ease-in-out;
+    }
+    
+    #rental-form {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    #rental-form label {
+        margin: 10px 0 5px;
+        font-weight: bold;
+        color: #333;
+    }
+    
+    #rental-form input, #rental-form textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+        transition: border-color 0.3s ease-in-out;
+    }
+    
+    #rental-form input:focus, #rental-form textarea:focus {
+        border-color: #ff6347;
+        outline: none;
+    }
+    
+    #rental-form button {
+        background-color: #ff6347;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: background-color 0.3s ease-in-out;
+    }
+    
+    #rental-form button:hover {
+        background-color: #e55340;
+    }
+    
+    #rent-form.show {
+        transform: scale(1.05);
+    }
+
+    .thank-you-message {
+        margin-top: 20px;
+        font-size: 1.5em;
+        color: #2E3A59; /* Dark blue color */
+        font-weight: bold;
+        text-align: center;
+        animation: fadeIn 0.5s ease-in-out;
+    }
+    
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+    
+    .continue-shopping-button {
+        background-color: #ff6347;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        border-radius: 5px;
+        margin-top: 20px;
+        font-size: 1em;
+        transition: background-color 0.3s ease-in-out;
+    }
+    
+    .continue-shopping-button:hover {
+        background-color: #e55340;
+    }
+    
+    
+    
+
+#reviews {
+    margin-top: 40px;
+}
+
+.review {
+    margin: 20px 0;
+}
+
+footer {
+    background-color: #f8f8f8;
+    padding: 20px;
+}
+
+footer form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+footer input {
+    padding: 10px;
+    font-size: 1em;
+}
+
+footer button {
+    padding: 10px;
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.footer-nav {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section a {
+    color: #ff6347;
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    text-decoration: underline;
+}
+.navbar {
+    background-color: #007bff;
+    padding: 10px 20px;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-logo {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbar-menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-menu li {
+    margin-left: 20px;
+}
+
+.navbar-menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.navbar-menu a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+    <link rel="stylesheet" href="/stylesheet/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Trendy Threads - Product Details</h1>
+    </header>
+    <main>
+        <section id="product-detail">
+            <h2>Product Details</h2>
+            <div class="product-info">
+                <img id="product-image" src="" alt="Product Image">
+                <div class="product-details">
+                    <h3 id="product-name"></h3>
+                    <p id="product-price"></p>
+                    <p id="product-description"></p>
+                    <button id="rent-now">Rent Now</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- <div class="product-details">
+            <h3 id="product-name"></h3>
+            <p id="product-price"></p>
+            <p id="product-description"></p>
+            Rent Now Button
+             <button id="rent-now">Rent Now</button> -->
+        <!-- </div> --> 
+
+
+        <!-- Form Section -->
+<section id="rent-form" style="display: none;">
+    <h2>Rental Information</h2>
+    <form id="rental-form">
+        <label for="first-name">First Name:</label>
+        <input type="text" id="first-name" name="first-name" required>
+        
+        <label for="last-name">Last Name:</label>
+        <input type="text" id="last-name" name="last-name" required>
+        
+        <label for="mobile-number">Mobile Number:</label>
+        <input type="tel" id="mobile-number" name="mobile-number" required>
+        
+        <label for="rental-duration">Rental Duration (days):</label>
+        <input type="number" id="rental-duration" name="rental-duration" required>
+        
+        <label for="address">Address:</label>
+        <textarea id="address" name="address" required></textarea>
+        
+        <button type="submit">Submit</button>
+    </form>
+</section>        
+    </main>
+    <script src="/javascript/data.js"></script>
+    <script src="/javascript/product.js"></script>
+</body>
+</html>
